@@ -11,3 +11,4 @@ ProfileCanvas = "efd6af41-a80b-495e-886c-e51b0c7d77a3"
 [compat]
 julia = "1.10"
 BenchmarkTools = "1.3"
+ProfileCanvas = "0.1"

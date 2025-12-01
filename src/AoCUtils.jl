@@ -88,7 +88,7 @@ function run_day(day::Int)
     end
     
     include(solution_path)
-    Main.main()
+    main()
 end
 
 end # module
