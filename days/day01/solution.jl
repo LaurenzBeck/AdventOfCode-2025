@@ -1,29 +1,18 @@
 # Advent of Code 2025 - Day 1
 # https://adventofcode.com/2025/day/1
 
-"""
-Parse the input file and return the data structure needed for solving.
-"""
-function parse_input(filename::String)
-    lines = readlines(filename)
-    # TODO: Parse input according to puzzle requirements
-    return lines
-end
+parse_input(filename) = readlines(filename) .|> l -> (l[1] == 'R' ? 1 : -1) * parse(Int, l[2:end])
 
-"""
-Solve Part 1 of the puzzle.
-"""
-function part1(data)
-    # TODO: Implement Part 1 solution
-    return nothing
-end
+points_at_zero(🎛️) = 🎛️%100==0
 
-"""
-Solve Part 2 of the puzzle.
-"""
-function part2(data)
-    # TODO: Implement Part 2 solution
-    return nothing
+zero_crossings(range) = count(points_at_zero, min(range...)+1:max(range...)-1)
+
+part1(rotations) = count(points_at_zero, accumulate(+, rotations; init=50))
+
+function part2(rotations)
+    positions = accumulate(+, rotations; init=50)
+    positions_sliding_window = zip(positions, Iterators.drop(positions, 1))
+    count(points_at_zero, positions) + sum(zero_crossings, positions_sliding_window)
 end
 
 # Main execution

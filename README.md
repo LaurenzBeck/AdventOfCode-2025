@@ -1,6 +1,10 @@
+![](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*aH6V3vs_ICdpnvPi90XB7w.jpeg)
+
 # 🎄 Advent of Code 2025
 
 My solutions for [Advent of Code 2025](https://adventofcode.com/2025) in Julia.
+
+> 🤚 I tried the new copilot feature, that initializes a repository based on a prompt. The structure of this repository is, therefore, AI generated. The solutions are created without the use of AI 🔥
 
 ## 📋 Table of Contents
 
@@ -217,7 +221,7 @@ profile_solution(part1, data, n=1000)
 
 | Day | Title | Part 1 | Part 2 | Notes |
 |-----|-------|--------|--------|-------|
-| 01  | _TBD_ | ⬜ | ⬜ | |
+| 01  | Secret Entrance | ⭐ | ⭐ | |
 | 02  | _TBD_ | ⬜ | ⬜ | |
 | 03  | _TBD_ | ⬜ | ⬜ | |
 | 04  | _TBD_ | ⬜ | ⬜ | |
