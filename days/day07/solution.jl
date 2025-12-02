@@ -29,21 +29,21 @@ end
 # Main execution
 function main()
     input_file = joinpath(@__DIR__, "input.txt")
-    
+
     if !isfile(input_file)
         println("⚠️  Input file not found: $input_file")
         println("   Please add your puzzle input to this file.")
         return
     end
-    
+
     data = parse_input(input_file)
-    
+
     println("🎄 Advent of Code 2025 - Day 7")
     println("━" ^ 40)
-    
+
     result1 = part1(data)
     println("Part 1: $result1")
-    
+
     result2 = part2(data)
     println("Part 2: $result2")
 end
