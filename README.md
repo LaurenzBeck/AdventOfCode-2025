@@ -222,7 +222,7 @@ profile_solution(part1, data, n=1000)
 | Day | Title | Part 1 | Part 2 | Notes |
 |-----|-------|--------|--------|-------|
 | 01  | Secret Entrance | ⭐ | ⭐ | |
-| 02  | _TBD_ | ⬜ | ⬜ | |
+| 02  | Gift Shop | ⭐ | ⭐ | |
 | 03  | _TBD_ | ⬜ | ⬜ | |
 | 04  | _TBD_ | ⬜ | ⬜ | |
 | 05  | _TBD_ | ⬜ | ⬜ | |
