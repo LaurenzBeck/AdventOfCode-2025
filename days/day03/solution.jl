@@ -1,30 +1,19 @@
 # Advent of Code 2025 - Day 3
 # https://adventofcode.com/2025/day/3
+using Chain
 
-"""
-Parse the input file and return the data structure needed for solving.
-"""
-function parse_input(filename::String)
-    lines = readlines(filename)
-    # TODO: Parse input according to puzzle requirements
-    return lines
+parse_input(📄)::Vector{Vector{Int}} =
+    map(bank -> map(c -> parse(Int, c), collect(bank)), readlines(📄))
+
+function 🔋(bank::Vector{Int}, num_batteries)::Int
+    num_batteries==1 && return maximum(bank)
+    index_of_first_battery = argmax(bank[1:(end-num_batteries+1)])
+    10^(num_batteries-1)*bank[index_of_first_battery] +
+        🔋(bank[(index_of_first_battery+1):end], num_batteries-1)
 end
 
-"""
-Solve Part 1 of the puzzle.
-"""
-function part1(data)
-    # TODO: Implement Part 1 solution
-    return nothing
-end
-
-"""
-Solve Part 2 of the puzzle.
-"""
-function part2(data)
-    # TODO: Implement Part 2 solution
-    return nothing
-end
+part1(banks) = @chain banks 🔋.(2) sum
+part2(banks) = @chain banks 🔋.(12) sum
 
 # Main execution
 function main()

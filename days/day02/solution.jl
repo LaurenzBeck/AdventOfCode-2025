@@ -11,12 +11,12 @@ parse_input(📄)::Vector{UnitRange{Int64}} =
 is_invalid_part1(id::Int) = occursin(r"^(?!0)(\d+?)\1$", string(id))
 
 part1(ranges::Vector{UnitRange{Int64}})::Int =
-    @chain ranges map(x -> filter(is_invalid_part1, x), _) sum.() sum
+    @chain ranges map(id -> filter(is_invalid_part1, id), _) sum.() sum
 
 is_invalid_part2(id::Int) = occursin(r"^(?!0)(\d+)\1{1,}$", string(id))
 
 part2(ranges::Vector{UnitRange{Int64}})::Int =
-    @chain ranges map(x -> filter(is_invalid_part2, x), _) sum.() sum
+    @chain ranges map(id -> filter(is_invalid_part2, id), _) sum.() sum
 
 
 function main()
