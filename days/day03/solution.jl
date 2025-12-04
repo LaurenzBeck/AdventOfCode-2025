@@ -9,7 +9,7 @@ function 🔋(bank::Vector{Int}, num_batteries)::Int
     num_batteries==1 && return maximum(bank)
     index_of_first_battery = argmax(bank[1:(end-num_batteries+1)])
     10^(num_batteries-1)*bank[index_of_first_battery] +
-        🔋(bank[(index_of_first_battery+1):end], num_batteries-1)
+    🔋(bank[(index_of_first_battery+1):end], num_batteries-1)
 end
 
 part1(banks) = @chain banks 🔋.(2) sum
